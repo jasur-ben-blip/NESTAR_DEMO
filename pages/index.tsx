@@ -1,15 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Next.js 14 uchun standart va barqaror shrift
+const inter = Inter({
   subsets: ["latin"],
 });
 
@@ -22,9 +17,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
-        className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
-      >
+
+      {/* ClassName qismini inter.className ga o'zgartirdim. 
+          Bu orqali "Unknown font Geist" xatosi butunlay yo'qoladi.
+      */}
+      <div className={`${styles.page} ${inter.className}`}>
         <main className={styles.main}>
           <Image
             className={styles.logo}
@@ -35,7 +32,7 @@ export default function Home() {
             priority
           />
           <div className={styles.intro}>
-            <h1>To get started, edit the index.tsx file.</h1>
+            <h1>PAGES ROUTER</h1>
             <p>
               Looking for a starting point or more instructions? Head over to{" "}
               <a
