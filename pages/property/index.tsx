@@ -1,6 +1,10 @@
-const PropertyList = () => {
+import withLayoutBasic from "@/libs/components/layout/layoutBasic";
+import { Container } from "@mui/material";
+import { NextPage } from "next";
+
+const PropertyList: NextPage = () => {
   console.log("PROPERTY LIST COMPONENT - PAGES ROUTING");
-  return <div>PROPERTY LIST</div>;
+  return <Container>PROPERTY LIST</Container>;
 };
 
-export default PropertyList;
+export default withLayoutBasic(PropertyList);
