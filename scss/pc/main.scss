@@ -1,4 +1,3 @@
-$font: "Arial", sans-serif; // Shunchaki test uchun
 /* IMPORTS */
 @import "/scss/variables.scss";
 @import "/scss/pc/homepage/homepage.scss";
@@ -369,6 +368,43 @@ $font: "Arial", sans-serif; // Shunchaki test uchun
             border: 1px solid #b9b9b9;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           }
+        }
+      }
+    }
+  }
+  .header-basic {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    background-size: cover;
+
+    .container {
+      position: relative;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      .header-basic-content {
+        position: absolute;
+        top: 160px;
+        display: flex;
+        flex-direction: column;
+
+        strong {
+          color: #ffffff;
+          font-family: $font;
+          font-size: 45px;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        span {
+          margin-top: 10px;
+          color: #ffffff;
+          font-family: $font;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: normal;
+          opacity: 0.8;
         }
       }
     }
